@@ -2,9 +2,8 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    // Insert roles into the 'Roles' table
     await queryInterface.bulkInsert(
-      "Roles",
+      "Role",
       [
         {
           name: "admin",
@@ -22,7 +21,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    // Remove the roles from the 'Roles' table
-    await queryInterface.bulkDelete("Roles", null, {});
+    await queryInterface.bulkDelete("Role", null, {});
   },
 };

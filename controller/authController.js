@@ -12,6 +12,7 @@ exports.register = async (req, res) => {
     res.status(500).json({ error: error.message || "Internal Server error" });
   }
 };
+
 exports.login = async (req, res) => {
   const { username, password } = req.body;
   try {
